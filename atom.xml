@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://gods-fall.github.io/</id>
+    <title>gods-fall</title>
+    <updated>2022-01-13T09:46:08.248Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://gods-fall.github.io/"/>
+    <link rel="self" href="https://gods-fall.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://gods-fall.github.io/images/avatar.png</logo>
+    <icon>https://gods-fall.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, gods-fall</rights>
+</feed>
