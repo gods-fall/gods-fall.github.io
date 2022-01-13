@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gods-fall.github.io</id>
     <title>gods-fall</title>
-    <updated>2022-01-13T11:12:18.193Z</updated>
+    <updated>2022-01-13T11:48:26.188Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gods-fall.github.io"/>
     <link rel="self" href="https://gods-fall.github.io/atom.xml"/>
@@ -11,10 +11,78 @@
     <icon>https://gods-fall.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, gods-fall</rights>
     <entry>
-        <title type="html"><![CDATA[1]]></title>
-        <id>https://gods-fall.github.io/post/1/</id>
-        <link href="https://gods-fall.github.io/post/1/">
+        <title type="html"><![CDATA[2.1信息搜集（二）]]></title>
+        <id>https://gods-fall.github.io/Iqh3_pNVs/</id>
+        <link href="https://gods-fall.github.io/Iqh3_pNVs/">
         </link>
-        <updated>2022-01-13T09:47:41.000Z</updated>
+        <updated>2022-01-04T11:44:11.000Z</updated>
+        <summary type="html"><![CDATA[<p>子域名</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>子域名</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2.1信息搜集(一)]]></title>
+        <id>https://gods-fall.github.io/dx3U8grJE/</id>
+        <link href="https://gods-fall.github.io/dx3U8grJE/">
+        </link>
+        <updated>2022-01-01T11:39:25.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1.2攻击流程]]></title>
+        <id>https://gods-fall.github.io/ERJDOpPgc/</id>
+        <link href="https://gods-fall.github.io/ERJDOpPgc/">
+        </link>
+        <updated>2022-01-01T11:32:31.000Z</updated>
+        <summary type="html"><![CDATA[<p>一般分为<br>
+1.信息收集<br>
+2.漏洞分析<br>
+3.攻击<br>
+4.后渗透</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一般分为<br>
+1.信息收集<br>
+2.漏洞分析<br>
+3.攻击<br>
+4.后渗透</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1.1攻击路径]]></title>
+        <id>https://gods-fall.github.io/11-gong-ji-lu-jing/</id>
+        <link href="https://gods-fall.github.io/11-gong-ji-lu-jing/">
+        </link>
+        <updated>2021-12-29T11:27:22.000Z</updated>
+        <summary type="html"><![CDATA[<p>攻击分类<br>
+（1）互联网web系统应用<br>
+（2）移动应用app<br>
+（3）互联网系统与服务<br>
+（4）社会工程<br>
+（5）供应链<br>
+（6）互联网旁站<br>
+（7）近源</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>攻击分类<br>
+（1）互联网web系统应用<br>
+（2）移动应用app<br>
+（3）互联网系统与服务<br>
+（4）社会工程<br>
+（5）供应链<br>
+（6）互联网旁站<br>
+（7）近源</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于我]]></title>
+        <id>https://gods-fall.github.io/1/</id>
+        <link href="https://gods-fall.github.io/1/">
+        </link>
+        <updated>2021-12-06T09:47:41.000Z</updated>
+        <summary type="html"><![CDATA[<p>第一次在GitHub建博客没想到挺好玩的，嘿嘿。<br>
+今后我所有的文章将会投到这里，欢迎有人来看，如果没有也没关系，哈哈，也许有一天就有了呢。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>第一次在GitHub建博客没想到挺好玩的，嘿嘿。<br>
+今后我所有的文章将会投到这里，欢迎有人来看，如果没有也没关系，哈哈，也许有一天就有了呢。</p>
+]]></content>
     </entry>
 </feed>
