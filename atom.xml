@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gods-fall.github.io</id>
     <title>gods-fall</title>
-    <updated>2022-01-13T11:51:46.663Z</updated>
+    <updated>2022-01-14T04:44:30.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gods-fall.github.io"/>
     <link rel="self" href="https://gods-fall.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://gods-fall.github.io/images/avatar.png</logo>
     <icon>https://gods-fall.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, gods-fall</rights>
+    <entry>
+        <title type="html"><![CDATA[2.1信息搜集（三）]]></title>
+        <id>https://gods-fall.github.io/i9Jl8mLWp/</id>
+        <link href="https://gods-fall.github.io/i9Jl8mLWp/">
+        </link>
+        <updated>2022-01-14T04:20:25.000Z</updated>
+        <summary type="html"><![CDATA[<p>服务器信息搜集<br>
+端口，web容器，操作系统</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>服务器信息搜集<br>
+端口，web容器，操作系统</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2.1信息搜集（二）]]></title>
         <id>https://gods-fall.github.io/Iqh3_pNVs/</id>
