@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gods-fall.github.io</id>
-    <title>gods-fall</title>
-    <updated>2022-01-25T08:49:25.594Z</updated>
+    <title>godsfall</title>
+    <updated>2022-01-25T10:24:43.439Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gods-fall.github.io"/>
     <link rel="self" href="https://gods-fall.github.io/atom.xml"/>
-    <subtitle>学无止境</subtitle>
+    <subtitle> &lt;marquee  behavior=&quot;scroll&quot; scrollamount=&quot;4&quot;&gt;&lt;font    color=&quot;#F5F5F5&quot;  size=&quot;3&quot; &gt;行尽天涯静默山水间，倾听晚风拂柳笛声残&lt;/font&gt;&lt;/marquee&gt;</subtitle>
     <logo>https://gods-fall.github.io/images/avatar.png</logo>
     <icon>https://gods-fall.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2022, gods-fall</rights>
+    <rights>All rights reserved 2022, godsfall</rights>
     <entry>
         <title type="html"><![CDATA[2.1信息搜集（三）]]></title>
         <id>https://gods-fall.github.io/i9Jl8mLWp/</id>

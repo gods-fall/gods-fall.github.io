@@ -3,97 +3,112 @@
   <head>
     <meta charset="utf-8" >
 
-<title>2.1信息搜集（三） | gods-fall</title>
-<meta name="description" content="学无止境">
+<title>2.1信息搜集（三） | godsfall</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1643100492425">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1643106256378">
 <link rel="stylesheet" href="https://gods-fall.github.io/styles/main.css">
 
 
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
+
+    <meta name="description" content="服务器信息搜集
+端口，web容器，操作系统
+
+一.端口
+nmap -sV -p 1-65535 192.168.x.x
+goby
+adp scan (这个快)
+gorailgun（其中端口扫描模块，这个工具做的相当不错，--冬奥2022hw..." />
+    <meta name="keywords" content="The dream begins" />
   </head>
   <body>
-  
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://gods-fall.github.io">gods-fall</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://gods-fall.github.io">
+        <img src="https://gods-fall.github.io/images/avatar.png?v=1643106256378" class="site-logo">
+        <h1 class="site-title">godsfall</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
         
-          <li>
-            
-              <a href="https://gods-fall.github.io" class="menu">
-                首页
-              </a>
-            
-          </li>
+          <a href="https://gods-fall.github.io" class="site-nav">
+            首页
+          </a>
         
-          <li>
-            
-              <a href="https://gods-fall.github.io/archives" class="menu">
-                归档
-              </a>
-            
-          </li>
+      
         
-          <li>
-            
-              <a href="https://gods-fall.github.io/1" class="menu">
-                关于
-              </a>
-            
-          </li>
+          <a href="https://gods-fall.github.io/archives" class="site-nav">
+            归档
+          </a>
         
-          <li>
-            
-              <a href="http://110.42.159.32/" class="menu">
-                靶场
-              </a>
-            
-          </li>
+      
         
-      </ul>
+          <a href="https://gods-fall.github.io/1" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="http://110.42.159.32/" class="site-nav">
+            靶场
+          </a>
+        
+      
     </div>
   </div>
-</nav>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/profile.php?id=100073470848243" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+       <marquee  behavior="scroll" scrollamount="4"><font    color="#F5F5F5"  size="3" >行尽天涯静默山水间，倾听晚风拂柳笛声残</font></marquee>
+    </div>
+    <div class="site-footer">
+      Powered by <a href="delisa.top" target="_blank">=gods fall</a>
+<br>友情链接：<a href="http://bbs.tesla-space.com/" target="_blank">hack学习圈子</a> | <a class="rss" href="https://gods-fall.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
 
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <article class="article">
-            <h1>2.1信息搜集（三）</h1>
-            <p class="article-meta">
-              2022-01-14
-              
-                <a href="https://gods-fall.github.io/j13NZGbvQ/" class="badge secondary">
-                  The dream begins
-                </a>
-              
-            </p>
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">2.1信息搜集（三）</h2>
+            <div class="post-date">2022-01-14</div>
             
-              <img src="https://tse1-mm.cn.bing.net/th/id/R-C.147b93c731e5921cd694324f2ad6bc92?rik=YyrNpvS1grqA3A&amp;riu=http%3a%2f%2fimage.qianye88.com%2fpic%2fa263b958c85c122c58a9cc1e491efc8b&amp;ehk=XADVUFcm1K5jX%2bX%2fvufqpHLj1bV7YndwR4US2IJ1pv4%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" alt="2.1信息搜集（三）">
+              <div class="feature-container" style="background-image: url('https://tse1-mm.cn.bing.net/th/id/R-C.147b93c731e5921cd694324f2ad6bc92?rik=YyrNpvS1grqA3A&amp;riu=http%3a%2f%2fimage.qianye88.com%2fpic%2fa263b958c85c122c58a9cc1e491efc8b&amp;ehk=XADVUFcm1K5jX%2bX%2fvufqpHLj1bV7YndwR4US2IJ1pv4%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0')">
+              </div>
             
-            <div class="post-content">
+            <div class="post-content" v-pre>
               <p>服务器信息搜集<br>
 端口，web容器，操作系统</p>
 <!-- more -->
@@ -112,126 +127,54 @@ wappalyzer</p>
 nmap -O -A</p>
 
             </div>
-          </article>
-        </div>
-        <div class="paper" data-aos="fade-in">
-          
-            <div class="next-post">
-              <div class="next">
-                下一篇
+            
+              <div class="tag-container">
+                
+                  <a href="https://gods-fall.github.io/j13NZGbvQ/" class="tag">
+                    The dream begins
+                  </a>
+                
               </div>
-              <a href="https://gods-fall.github.io/Iqh3_pNVs/">
-                <h3 class="post-title">
-                  2.1信息搜集（二）
-                </h3>
-              </a>
-            </div>
-          
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://gods-fall.github.io/Iqh3_pNVs/">
+                  <h3 class="post-title">
+                    2.1信息搜集（二）
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
         </div>
-        
       </div>
-
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://gods-fall.github.io/images/avatar.png?v=1643100492425" class="no-responsive avatar">
-    <div class="text-muted">学无止境</div>
-    <div class="social-container">
-      
-        
-          <a href="https://github.com/gods-fall" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          <a href="https://www.facebook.com/profile.php?id=100073470848243" target="_blank">
-            <i class="fab fa-facebook"></i>
-          </a>
-        
-      
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
-    </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://gods-fall.github.io/i9Jl8mLWp/">2.1信息搜集（三）</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://gods-fall.github.io/Iqh3_pNVs/">2.1信息搜集（二）</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://gods-fall.github.io/dx3U8grJE/">2.1信息搜集(一)</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://gods-fall.github.io/ERJDOpPgc/">1.2攻击流程</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://gods-fall.github.io/11-gong-ji-lu-jing/">1.1攻击路径</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://gods-fall.github.io/1/">关于我</a>
-            </li>
-          
-        
-      </ul>
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-        <a href="https://gods-fall.github.io/j13NZGbvQ/" class="badge ">
-          The dream begins
-        </a>
-      
-    </div>
-  </div>
-  <div class="paper">
-    Powered by <a href="delisa.top" target="_blank">=gods fall</a> | <a class="rss" href="https://gods-fall.github.io/atom.xml" target="_blank">RSS</a>
-  </div>
-</div>
-
-
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
 <script type="application/javascript">
 
 AOS.init();
 
-hljs.initHighlightingOnLoad()
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
 
 
 
