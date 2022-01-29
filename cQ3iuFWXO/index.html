@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>cobalt strike安装与特征隐藏 | godsfall</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1643429459152">
+<link rel="stylesheet" href="https://gods-fall.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="       最近有粉丝来问我，服务器架设cobalt strike怎么搞，想搞一个玩玩，于是我写下了这篇文章，
+       这绝对是最全面最细节的部署，
+       老手直接跳过。
+       首先是关于版本选择，还有java环境（..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://gods-fall.github.io">
+        <img src="https://gods-fall.github.io/images/avatar.png?v=1643429459152" class="site-logo">
+        <h1 class="site-title">godsfall</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://gods-fall.github.io" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="https://gods-fall.github.io/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="https://gods-fall.github.io/1" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="http://110.42.159.32/" class="site-nav">
+            靶场
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/profile.php?id=100073470848243" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+       <marquee  behavior="scroll" scrollamount="4"><font    color="#F5F5F5"  size="3" >行尽天涯静默山水间，倾听晚风拂柳笛声残</font></marquee>
+    </div>
+    <div class="site-footer">
+      Powered by <a href="delisa.top" target="_blank">=gods fall</a>
+<br>友链：&nbsp;&nbsp;<a href="http://neg0615.top/" target="_blank">rfxy</a>&nbsp; | <a class="rss" href="https://gods-fall.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">cobalt strike安装与特征隐藏</h2>
+            <div class="post-date">2022-01-29</div>
+            
+              <div class="feature-container" style="background-image: url('https://www.cobaltstrike.com/wp-content/uploads/2021/11/features-screenshot-1.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <pre><code>       最近有粉丝来问我，服务器架设cobalt strike怎么搞，想搞一个玩玩，于是我写下了这篇文章，
+       这绝对是最全面最细节的部署，
+       老手直接跳过。
+       首先是关于版本选择，还有java环境（jdk8，jdk11，正常情况不用设置环境变量，java-version确认一下，不行的话手动添加）
+      个人推荐github大佬项目CSAgent
+</code></pre>
+<p><img src="https://gods-fall.github.io/post-images/1643423791083.png" alt="" loading="lazy"><br>
+4.几的版本都有（需要用对应版本的java包替换），还有汉化，暗桩应该被去了（我没感觉 到，如果有师傅搞了可以告诉我）<br>
+在github搞下来之后，有同学直接解压点击里面的bat脚本，发现闪退，这个是因为作者没   有加入cobalt strike的jar包（左面是刚下载的，右面是布置完成的本地目录），所以我们要添加对应的cs<br>
+<img src="https://gods-fall.github.io/post-images/1643424856500.png" alt="" loading="lazy"><br>
+添加完成，我们vim teamserver，修改server port 如图，把50050换成你喜欢而且不           冲突的端口，（换端口的原因 肯定是指纹过于明显）<br>
+<img src="https://gods-fall.github.io/post-images/1643425098379.png" alt="" loading="lazy"><br>
+然后打开filezilla，把整个文件上传到服务器，打开webshell，放通你刚才port的端            口，有安全组的放通安全组<br>
+cd /www/wwwroot/CSAgent  来到目录下 ./teamserver 服务器ip  密码  本地连接          发现没有问题<br>
+<img src="https://gods-fall.github.io/post-images/1643425803212.png" alt="" loading="lazy"><br>
+然后修改Cobalt Strike默认的证书，默认的被waf和防火敲烂，延时吓人<br>
+本地直接生成cs证书，敲（也可以自己换成别的）然后上传替换<br>
+keytool -keystore cobaltstrike.store -storepass 123456 -keypass 123456 -genkey -keyalg RSA -alias 360.com -dname &quot;CN=US, OU=360.com, O=Sofaware, L=Somewhere, ST=Cyberspace, C=CN&quot;<br>
+<img src="https://gods-fall.github.io/post-images/1643426252759.png" alt="" loading="lazy"><br>
+流量混淆肯定要做的，不然会很明显，也就是官方默认的C2-Profiles这里是没有的<br>
+我们可以加入或者修改，我上net搜索了一遍（这里直接放链接）<br>
+https://github.com/rsmudge/Malleable-C2-Profiles<br>
+https://github.com/xx0hcd/Malleable-C2-Profiles/tree/master/normal<br>
+https://github.com/threatexpress/malleable-c2<br>
+上传到目录，./c2lint c2/bing_maps.profile 发现没有毛病<br>
+<img src="https://gods-fall.github.io/post-images/1643427550081.png" alt="" loading="lazy"><br>
+直接    ./teamserver ip   密码   ./c2lint c2/bing_maps.profile<br>
+登陆端口和流量已经改变，然后我们隐藏cs监听端口<br>
+我的想法就是设置nginx反向代理，限制端口访问<br>
+vim /usr/local/nginx/conf/nginx.conf<br>
+在http中的server中配置中添加<br>
+location ~*bing_map {<br>
+if ( $http_user_agent != &quot;Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko&quot;)<br>
+{<br>
+return 404;<br>
+}<br>
+proxy_pass http://192.168.0.102:50050;<br>
+}<br>
+查看自己的profile，改写useragent<br>
+<img src="https://gods-fall.github.io/post-images/1643428428617.png" alt="" loading="lazy"><br>
+设置防火墙只能让192.168.0.102访问监听端口</p>
+<p>iptables -I INPUT -p TCP --dport 50050 -j DROP<br>
+iptables -I INPUT -s 192.168.0.102 -p TCP --dport 50050 -j ACCEPT<br>
+service iptables restart<br>
+直接访问域名，直接跳转404<br>
+然后最后一步，设置cs后台运行，<br>
+apt-get install screen，安装nohub也可以，没有apt用yum，然后直接敲screen，运行teamserver命令（不要忘记混淆流量）,然后CTRL+a+d<br>
+然后敲screnn -ls 查看后台进程<br>
+这样的话断开ssh连接依然可以让其一直在后台运行命令，那么客户端随时都可以连接。<br>
+参考文章：https://www.ddosi.org/cobalt-strike-bypass              雨苁大佬（yyds）<br>
+https://www.cnblogs.com/-chenxs/p/11790392.html    博客园ctrl_TT豆</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://gods-fall.github.io/D9kvs8tgn/">
+                  <h3 class="post-title">
+                    文件上传pass1
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+
+  </body>
+</html>
