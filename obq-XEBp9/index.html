@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>1.1攻击路径 | godsfall</title>
+<title>SQL语言基础（一） | godsfall</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,20 +18,17 @@
 
 
 
-    <meta name="description" content="攻击分类
-（1）互联网web系统应用
-（2）移动应用app
-（3）互联网系统与服务
-（4）社会工程
-（5）供应链
-（6）互联网旁站
-（7）近源
+    <meta name="description" content="小皮面板一个
 
-一.
-owasp
-边境防护→隔离dmz→办公，运维，核心，安全管控。
-获取webshell，进..." />
-    <meta name="keywords" content="The dream begins" />
+
+mysql -u root -p 进入mysql界面
+select version ();版本号
+select user();用户
+show databases;
+use +l;
+select database();
+sh..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -107,60 +104,31 @@ owasp
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">1.1攻击路径</h2>
-            <div class="post-date">2021-12-29</div>
-            
-              <div class="feature-container" style="background-image: url('https://macjpeg.macsc.com/macdown/pic/202006/29095630_f105f0c69f.jpeg')">
-              </div>
+            <h2 class="post-title">SQL语言基础（一）</h2>
+            <div class="post-date">2022-02-05</div>
             
             <div class="post-content" v-pre>
-              <p>攻击分类<br>
-（1）互联网web系统应用<br>
-（2）移动应用app<br>
-（3）互联网系统与服务<br>
-（4）社会工程<br>
-（5）供应链<br>
-（6）互联网旁站<br>
-（7）近源</p>
-<!-- more -->
-<p>一.<br>
-owasp<br>
-边境防护→隔离dmz→办公，运维，核心，安全管控。<br>
-获取webshell，进入网站后台五点注意<br>
-（1）是否存在文件上传点，文件名是否可控<br>
-（2）是否可以备份数据库，数据库名是否可控<br>
-（3) 是否存在配置上传类型限制<br>
-（4）网站常规信息<br>
-（5）网站模板是否可以更改<br>
-二.<br>
-旁站获取<br>
-IP反查，端口扫描，二级域名</p>
-<!-- more -->
-<p><img src="https://gods-fall.github.io/post-images/1642073285577.jpg" alt="" loading="lazy"><br>
-三<br>
-端口渗透就是服务渗透<br>
-四.经典攻击手段<br>
-c段子域名旁站</p>
+              <p>小皮面板一个<br>
+<img src="https://gods-fall.github.io/post-images/1644064789509.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>mysql -u root -p 进入mysql界面<br>
+select version ();版本号<br>
+select user();用户<br>
+show databases;<br>
+use +l;<br>
+select database();<br>
+show tables;展示表<br>
+create table hack （ id int,username varchar(20),password varchar(30)）;<br>
+insert into + values (2,'delisa','1234');<br>
+select * from + where id=1 and usernmae=“admin”;表查询（and，or）<br>
+select * from hack where id=2 and exists (select * from hack1);表成立<br>
+select username,password from hack order by 2;排序<br>
+select username,password from hack union select usernmae,id from hack1 union（*is two）</p>
+<h1 id="-">--    /* */</h1>
+</blockquote>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://gods-fall.github.io/j13NZGbvQ/" class="tag">
-                    The dream begins
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://gods-fall.github.io/1/">
-                  <h3 class="post-title">
-                    关于我
-                  </h3>
-                </a>
-              </div>
             
 
             
