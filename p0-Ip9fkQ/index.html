@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>2.1信息搜集(一) | godsfall</title>
+<title>xss | godsfall</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,19 +18,14 @@
 
 
 
-    <meta name="description" content="ip发现
+    <meta name="description" content="发生地：web前端
+针对：网站用户
+说明：脚本语言被当作HTML一部分执行，用户访问页面触发
 
-cdn 内容分发网络
-1.多地ping确定IP是否一致
-2.nslookup解析（不是很准）
-绕过cdn
-1.全球ping （建议）
-2.dns记录查询（dnsdb，要开会员）
-3.通过网站漏洞获取文件（大咩）
-4.邮件源码
-
-..." />
-    <meta name="keywords" content="The dream begins" />
+反射型 一次性
+#alert(&quot;xss&quot;)
+#&lt;script&gt;alert(&quot;xss&quot;) 拆分..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -106,53 +101,36 @@ cdn 内容分发网络
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">2.1信息搜集(一)</h2>
-            <div class="post-date">2022-01-01</div>
+            <h2 class="post-title">xss</h2>
+            <div class="post-date">2022-02-20</div>
             
-              <div class="feature-container" style="background-image: url('https://tse2-mm.cn.bing.net/th/id/OIP-C.kk7ul7xcpOqK8utrpUUvyQHaEK?pid=ImgDet&amp;rs=1')">
+              <div class="feature-container" style="background-image: url('https://img.win3000.com/m00/79/f2/60c420e896b0306413b506cbda5a1b52.jpg')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>ip发现</p>
-<p><img src="https://gods-fall.github.io/post-images/1642073990604.jpg" alt="" loading="lazy"><br>
-cdn 内容分发网络<br>
-1.多地ping确定IP是否一致<br>
-2.nslookup解析（不是很准）<br>
-绕过cdn<br>
-1.全球ping （建议）<br>
-2.dns记录查询（dnsdb，要开会员）<br>
-3.通过网站漏洞获取文件（大咩）<br>
-4.邮件源码<br>
-<img src="https://gods-fall.github.io/post-images/1642074027022.png" alt="" loading="lazy"><br>
-旁站<br>
-1.同IP查询（一堆。zoomeye，shodan）<br>
-2.nmap -sV -p 1-65535 ip(建议不要在外网使用)<br>
-3.bing 语法ip:<br>
-<img src="https://gods-fall.github.io/post-images/1642074076502.png" alt="" loading="lazy"><br>
-c段<br>
-1.nmap -sn 0/24（-Pn，打咩）<br>
-2.谷歌site:*<br>
-<img src="https://gods-fall.github.io/post-images/1642074106591.png" alt="" loading="lazy"></p>
+              <p>发生地：web前端<br>
+针对：网站用户<br>
+说明：脚本语言被当作HTML一部分执行，用户访问页面触发<br>
+<img src="https://gods-fall.github.io/post-images/1645363317611.png" alt="" loading="lazy"><br>
+反射型 一次性<br>
+#<script>alert(&quot;xss&quot;)</script><br>
+#&lt;scr<script>ipt&gt;alert(&quot;xss&quot;)</script> 拆分<br>
+#1</pre>  &lt;img src=1 onerror=alert(&quot;闭合大法好&quot;)&gt;<pre>22<br>
+存储型 永久型<br>
+输入框限制<br>
+dom型</p>
+<p>1.输入点确定，接口 留言板（接口爱反射，留言板爱存储）<br>
+2.输入唯一字符，查看页面源码<br>
+3.提交构造的script（后台可能把script过滤，提交不同的script尝试绕过）<br>
+远程xss获取cookie<br>
+<img src="https://gods-fall.github.io/post-images/1645368784015.png" alt="" loading="lazy"><br>
+CSRF（跨站请求伪造）<br>
+判断<br>
+1修改密码不验证旧密码<br>
+2无referer无限制无token</p>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://gods-fall.github.io/j13NZGbvQ/" class="tag">
-                    The dream begins
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://gods-fall.github.io/ERJDOpPgc/">
-                  <h3 class="post-title">
-                    1.2攻击流程
-                  </h3>
-                </a>
-              </div>
             
 
             

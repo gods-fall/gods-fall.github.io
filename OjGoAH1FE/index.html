@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>2.1信息搜集(一) | godsfall</title>
+<title>DVWA | godsfall</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,19 +18,13 @@
 
 
 
-    <meta name="description" content="ip发现
-
-cdn 内容分发网络
-1.多地ping确定IP是否一致
-2.nslookup解析（不是很准）
-绕过cdn
-1.全球ping （建议）
-2.dns记录查询（dnsdb，要开会员）
-3.通过网站漏洞获取文件（大咩）
-4.邮件源码
-
-..." />
-    <meta name="keywords" content="The dream begins" />
+    <meta name="description" content="1.安装
+gitclone
+修改dvwa/config/config.inc.php.dist的文件名为config.inc.php，丢编辑器修改数据库配置
+php.ini修改 （github粘贴）
+文件夹权限：
+./hackable/up..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -106,50 +100,45 @@ cdn 内容分发网络
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">2.1信息搜集(一)</h2>
-            <div class="post-date">2022-01-01</div>
+            <h2 class="post-title">DVWA</h2>
+            <div class="post-date">2022-02-20</div>
             
-              <div class="feature-container" style="background-image: url('https://tse2-mm.cn.bing.net/th/id/OIP-C.kk7ul7xcpOqK8utrpUUvyQHaEK?pid=ImgDet&amp;rs=1')">
+              <div class="feature-container" style="background-image: url('https://img.win3000.com/m00/10/98/2df20178d9a2b2b4bb3eec92b70c5a28.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>ip发现</p>
-<p><img src="https://gods-fall.github.io/post-images/1642073990604.jpg" alt="" loading="lazy"><br>
-cdn 内容分发网络<br>
-1.多地ping确定IP是否一致<br>
-2.nslookup解析（不是很准）<br>
-绕过cdn<br>
-1.全球ping （建议）<br>
-2.dns记录查询（dnsdb，要开会员）<br>
-3.通过网站漏洞获取文件（大咩）<br>
-4.邮件源码<br>
-<img src="https://gods-fall.github.io/post-images/1642074027022.png" alt="" loading="lazy"><br>
-旁站<br>
-1.同IP查询（一堆。zoomeye，shodan）<br>
-2.nmap -sV -p 1-65535 ip(建议不要在外网使用)<br>
-3.bing 语法ip:<br>
-<img src="https://gods-fall.github.io/post-images/1642074076502.png" alt="" loading="lazy"><br>
-c段<br>
-1.nmap -sn 0/24（-Pn，打咩）<br>
-2.谷歌site:*<br>
-<img src="https://gods-fall.github.io/post-images/1642074106591.png" alt="" loading="lazy"></p>
+              <p>1.安装<br>
+gitclone<br>
+修改dvwa/config/config.inc.php.dist的文件名为config.inc.php，丢编辑器修改数据库配置<br>
+php.ini修改 （github粘贴）<br>
+文件夹权限：</p>
+<p>./hackable/uploads/ - 需要允许web服务可写（用于文件上传）。<br>
+./external/phpids/0.6/lib/IDS/tmp/phpids_log.txt - 需要允许web服务可写（如果你想使用 PHPIDS）。<br>
+PHP配置:</p>
+<p>allow_url_include = on - 允许远程文件包含 (RFI) [allow_url_include]<br>
+allow_url_fopen = on - 允许远程文件包含 (RFI) [allow_url_fopen]<br>
+safe_mode = off - （如果 PHP &lt;= v5.4）允许 SQL 注入（SQLi） [safe_mode]<br>
+magic_quotes_gpc = off - （如果 PHP &lt;= v5.4）允许 SQL 注入（SQLi） [magic_quotes_gpc]<br>
+display_errors = off - （可选）隐藏 PHP 警告消息以使其不那么冗长 [display_errors]<br>
+文件: config/config.inc.php:</p>
+<p>$_DVWA[ 'recaptcha_public_key' ] &amp; $_DVWA[ 'recaptcha_private_key' ] - 这些值需要从https://www.google.com/recaptcha/admin/create 生成<br>
+默认的凭证<br>
+默认 username = admin<br>
+默认 password = password<br>
+2.等级分类<br>
+low:完全没有加固漏洞明显<br>
+mdium：有部分安全措施，不严格<br>
+high：使用了严格的安全措施<br>
+imposs：使用严格的代码编写</p>
 
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://gods-fall.github.io/j13NZGbvQ/" class="tag">
-                    The dream begins
-                  </a>
-                
-              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://gods-fall.github.io/ERJDOpPgc/">
+                <a href="https://gods-fall.github.io/cQ3iuFWXO/">
                   <h3 class="post-title">
-                    1.2攻击流程
+                    cobalt strike安装与特征隐藏
                   </h3>
                 </a>
               </div>
