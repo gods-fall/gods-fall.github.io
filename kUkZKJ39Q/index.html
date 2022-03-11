@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1646799587372">
+<link rel="shortcut icon" href="https://gods-fall.github.io/favicon.ico?v=1646983383690">
 <link rel="stylesheet" href="https://gods-fall.github.io/styles/main.css">
 
 
@@ -18,8 +18,13 @@
 
 
 
-    <meta name="description" content="1
-" />
+    <meta name="description" content="jdk 选型 安装 配置
+优点.跨平台 可移植
+选择：优先选择openjdk
+adoptopen jdk
+步骤：下载龙well 然后丢进去解压（tar xf  -C /opt）
+进入目录 version
+JAVA_HOME=/opt/目录（..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -29,7 +34,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://gods-fall.github.io">
-        <img src="https://gods-fall.github.io/images/avatar.png?v=1646799587372" class="site-logo">
+        <img src="https://gods-fall.github.io/images/avatar.png?v=1646983383690" class="site-logo">
         <h1 class="site-title">godsfall</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -99,8 +104,55 @@
             <h2 class="post-title">java学习笔记</h2>
             <div class="post-date">2022-03-09</div>
             
+              <div class="feature-container" style="background-image: url('https://tse1-mm.cn.bing.net/th/id/OIP-C.vYYaFf658-yDm1m-TviXuwHaDt?pid=ImgDet&amp;rs=1')">
+              </div>
+            
             <div class="post-content" v-pre>
-              <p>1</p>
+              <p>jdk 选型 安装 配置<br>
+优点.跨平台 可移植<br>
+选择：优先选择openjdk<br>
+adoptopen jdk<br>
+步骤：下载龙well 然后丢进去解压（tar xf  -C /opt）<br>
+进入目录 version<br>
+JAVA_HOME=/opt/目录（环境配置）<br>
+PATH=<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">PATH:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span>JAVA_HOME/bin<br>
+版本确认<br>
+cat &gt;&gt; ~/.bashrc(持久化)+环境<br>
+该死的面向对象（高志远，速度慢）和面向过程（狄志远，速度快）<br>
+hello.java&gt;编译&gt;hello.class&gt;解释&gt;hello<br>
+ava程序组成 java源文件 字节码文件 机器码指令<br>
+编译命令 javac.exe、解释命令java.exe<br>
+jvm执行<br>
+jre 指解释不提供开发<br>
+Windows，unix， 类unix<br>
+面向对象三大特征<br>
+封装、继承、多态<br>
+面向对象五原则<br>
+单一职责原则 ：一个类。最好只做一件事，只有一个引起它的变化。<br>
+开放封闭原则：软件是可以扩展，不可以修改，对扩展开发，对修改关闭<br>
+liskov替换原则：子类必须能够替换其基类<br>
+接口隔离原则：使用多个小的专门接口，不使用大的接口<br>
+依赖倒置原则：具体而言就是高层模块不依赖于底层模块，二者都同依赖<br>
+于抽象；抽象不依赖于具体，具体依赖于抽象。<br>
+编写：<br>
+一。hello,java<br>
+字节码后缀无需编译<br>
+在java程序开发中最基础的单元是类，所有程序必须封装在类中执行，<br>
+而类的基本基本定义语法如下：<br>
+1.[public] class 类名称{}<br>
+类的定义有两种形式：<br>
+public class 类名称 {}; 类名称必须与文件名保持一致，一个java只允许有一个public class定义<br>
+class 类名称 {};类名称可以与文件名不一致，但是编译后的名称与class类名称一致，一个Java可以有多个class定义（很少）<br>
+定义命名，首字母大写<br>
+2.主方法 所有的程序执行起点， 一定要定义在类中，主方法所在的类是主类，所有主类都用public class定义<br>
+public class 类名称{<br>
+public static viod main (String [] args) {<br>
+程序由此开始<br>
+}<br>
+}<br>
+3.屏幕打印<br>
+输出追加换行 System.out.println();<br>
+输出不追加换行  System.out.print();</p>
 
             </div>
             
