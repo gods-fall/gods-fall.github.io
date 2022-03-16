@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>1.1攻击路径 | godsfall</title>
+<title>JAVA学习笔记3 | godsfall</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,20 +18,15 @@
 
 
 
-    <meta name="description" content="攻击分类
-（1）互联网web系统应用
-（2）移动应用app
-（3）互联网系统与服务
-（4）社会工程
-（5）供应链
-（6）互联网旁站
-（7）近源
-
-一.
-owasp
-边境防护→隔离dmz→办公，运维，核心，安全管控。
-获取webshell，进..." />
-    <meta name="keywords" content="The dream begins" />
+    <meta name="description" content="运算符 对数字的操作
+#括号优先级最高
+数学运算符，支持四则运算
+num +=简化运算
+++ --变量：变量自增自减，然后计算
+变量++ --：先运算然后自增和自简
+关系运算符
+主要特征 大小比较 &gt; &lt;= &gt;= &lt;..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -107,57 +102,59 @@ owasp
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">1.1攻击路径</h2>
-            <div class="post-date">2021-12-29</div>
+            <h2 class="post-title">JAVA学习笔记3</h2>
+            <div class="post-date">2022-03-11</div>
             
-              <div class="feature-container" style="background-image: url('https://macjpeg.macsc.com/macdown/pic/202006/29095630_f105f0c69f.jpeg')">
+              <div class="feature-container" style="background-image: url('https://gods-fall.github.io/post-images/lkuUtOyyk.jpg')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>攻击分类<br>
-（1）互联网web系统应用<br>
-（2）移动应用app<br>
-（3）互联网系统与服务<br>
-（4）社会工程<br>
-（5）供应链<br>
-（6）互联网旁站<br>
-（7）近源</p>
-<!-- more -->
-<p>一.<br>
-owasp<br>
-边境防护→隔离dmz→办公，运维，核心，安全管控。<br>
-获取webshell，进入网站后台五点注意<br>
-（1）是否存在文件上传点，文件名是否可控<br>
-（2）是否可以备份数据库，数据库名是否可控<br>
-（3) 是否存在配置上传类型限制<br>
-（4）网站常规信息<br>
-（5）网站模板是否可以更改<br>
-二.<br>
-旁站获取<br>
-IP反查，端口扫描，二级域名</p>
-<!-- more -->
-<p><img src="https://gods-fall.github.io/post-images/1642073285577.jpg" alt="" loading="lazy"><br>
-三<br>
-端口渗透就是服务渗透<br>
-四.经典攻击手段<br>
-c段子域名旁站</p>
+              <p>运算符 对数字的操作<br>
+#括号优先级最高<br>
+数学运算符，支持四则运算<br>
+num +=简化运算<br>
+++ --变量：变量自增自减，然后计算<br>
+变量++ --：先运算然后自增和自简<br>
+关系运算符<br>
+主要特征 大小比较 &gt; &lt;= &gt;= &lt; ==<br>
+相等判断问题单等赋值 内容比较==<br>
+三目运算符<br>
+三目运算可以嵌套处理<br>
+关系运算？关系满足时的内容：关系不满足的内容；<br>
+int max = x &gt; y ? x : y ;<br>
+位运算<br>
+可以直接进行二进制的计算处理<br>
+主要 与&amp; 或 | 异或^ 反码 ~ 移位处理<br>
+数字除2取余 （除余法算二进制）<br>
+13     →  00000000 00000000 00000000 00001101（Java）（32位）</p>
+<p>÷    2</p>
+<p>6……1</p>
+<p>÷    2</p>
+<p>3……0</p>
+<p>÷    2</p>
+<p>1……1</p>
+<p>÷    2</p>
+<p>0……1<br>
+或运算  有一为一 两位都是0才是零<br>
+与运算 都是一才是一 有一个是0都是0<br>
+移位：<br>
+2的移位</p>
+<p>面试题：请解释&amp;和&amp;&amp;、|和||的区别？<br>
+·&amp;和|两个运算符可以进行位运算与逻辑运算；<br>
+在进行逻辑运算的时候所有的判件断条都要执行；<br>
+在进行位运算的时候只是针对于当前的数据进行与和或处理；<br>
+在逻辑运算上还可以使用&amp;&amp;、||；<br>
+|-&amp;&amp;:在若干个条件判断的时候，如果前面的条件返回了false,后续所有的条件都不再判断最终的结果就是false;<br>
+|-||：在若干个条件判断的时候，如果前面的条件返回了true,后续条件不再执行，最终就是true.</p>
 
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://gods-fall.github.io/j13NZGbvQ/" class="tag">
-                    The dream begins
-                  </a>
-                
-              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://gods-fall.github.io/1/">
+                <a href="https://gods-fall.github.io/jb6C_pbKk/">
                   <h3 class="post-title">
-                    关于我
+                    java学习笔记2
                   </h3>
                 </a>
               </div>
