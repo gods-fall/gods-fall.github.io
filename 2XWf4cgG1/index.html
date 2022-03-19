@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>1.2攻击流程 | godsfall</title>
+<title>coblat strike基础到进阶 | godsfall</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,18 +18,14 @@
 
 
 
-    <meta name="description" content="一般分为
-1.信息收集
-2.漏洞分析
-3.攻击
-4.后渗透
-
-全面发现
-一.网站架构，ip，域名，服务器，人力资源信息等
-
-由信息搜集综合分析选择攻击攻击方式
-以最小的攻击流量夺取网站的权限，注意绕过防御机制，减少不必要的扫描和探测，防止警..." />
-    <meta name="keywords" content="The dream begins" />
+    <meta name="description" content="cobalt strike
+armitage（社区版，依赖msf）
+客户端（多个）client    teamserver（一个）服务端
+#文件结构
+scripts 用户安装的插件
+log 每天的日志
+c2lint 检查profile的错误..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -105,43 +101,76 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">1.2攻击流程</h2>
-            <div class="post-date">2022-01-01</div>
+            <h2 class="post-title">coblat strike基础到进阶</h2>
+            <div class="post-date">2022-03-19</div>
             
-              <div class="feature-container" style="background-image: url('https://uploadfile.bizhizu.cn/up/d8/10/09/d81009a1147619b2e12dc6ee5d9bffe4.jpg')">
+              <div class="feature-container" style="background-image: url('https://tse1-mm.cn.bing.net/th/id/R-C.1e8b0afa96769b288a8dca74cf5b9bb6?rik=%2baimp%2fNw%2b8S%2fwQ&amp;riu=http%3a%2f%2fimage.qianye88.com%2fpic%2fd089d166d559a3e0a543ead5ab650738&amp;ehk=ISs%2bQt567%2fRcQdxRG1s2caSk2SVhxFhENaijIDrKbKI%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>一般分为<br>
-1.信息收集<br>
-2.漏洞分析<br>
-3.攻击<br>
-4.后渗透</p>
-<!-- more -->
-<p>全面发现</p>
-<p>一.网站架构，ip，域名，服务器，人力资源信息等</p>
-<figure data-type="image" tabindex="1"><img src="https://gods-fall.github.io/post-images/1642073624073.jpg" alt="" loading="lazy"></figure>
-<p>由信息搜集综合分析选择攻击攻击方式<br>
-以最小的攻击流量夺取网站的权限，注意绕过防御机制，减少不必要的扫描和探测，防止警觉。<br>
-获取webshell扩大权限进行后渗透留取后门扫描内网资产<br>
-<img src="https://gods-fall.github.io/post-images/1642073613597.jpg" alt="" loading="lazy"></p>
+              <p>cobalt strike<br>
+armitage（社区版，依赖msf）<br>
+客户端（多个）client    teamserver（一个）服务端<br>
+#文件结构<br>
+scripts 用户安装的插件<br>
+log 每天的日志<br>
+c2lint 检查profile的错误异常<br>
+cobaltsrike<br>
+cobaltsrike.jar 客户端<br>
+icon.jpg<br>
+license.pdf证书许可文件<br>
+tearmserver 服务端程序<br>
+third-party 第三方工具（vnc.dll）<br>
+通信配置文件 malleable c2<br>
+引用其他的通信框架 external c2<br>
+#开始<br>
+默认证书替换<br>
+命令溜溜球（Linux命令溜溜球java -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -Xms512M -Xmx1024M -jar cobaltstrike.jar）<br>
+./teamserver your_ip your_passowrd [config_file]<br>
+#listener<br>
+beacon foreign 内部外部监听器<br>
+端口不能重复<br>
+无状态马<br>
+beacon 执行命令<br>
+心跳时间 默认是60  每分钟目标与teamserver通信一次<br>
+sleep s<br>
+#beacon（ http）<br>
+smb445 win是默认打开的 流量比较隐蔽（归横向）<br>
+ssh<br>
+<img src="https://gods-fall.github.io/post-images/1647676543617.png" alt="" loading="lazy"><br>
+凭据导出<br>
+扩大战果<br>
+1ntlmhash  hashdump 破解成功率可以说没有<br>
+2mimikatz<br>
+文件管理<br>
+进程管理<br>
+1进程注入<br>
+端口扫描<br>
+netview（域渗透<br>
+浏览器代理<br>
+web快速<br>
+socks<br>
+扩展<br>
+权限提升（powerup）<br>
+横向移动<br>
+控制持久化（维持权限）<br>
+<img src="https://gods-fall.github.io/post-images/1647682257234.png" alt="" loading="lazy"><br>
+自启动服务<br>
+<img src="https://gods-fall.github.io/post-images/1647682466907.png" alt="" loading="lazy"><br>
+白加黑<br>
+bdf<br>
+会话互转<br>
+metaspolit-coblatstrike</p>
+<p>网站克隆</p>
 
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://gods-fall.github.io/j13NZGbvQ/" class="tag">
-                    The dream begins
-                  </a>
-                
-              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://gods-fall.github.io/11-gong-ji-lu-jing/">
+                <a href="https://gods-fall.github.io/YhEjsJJnG/">
                   <h3 class="post-title">
-                    1.1攻击路径
+                    java学习笔记4
                   </h3>
                 </a>
               </div>
